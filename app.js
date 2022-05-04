@@ -69,7 +69,7 @@ function displayFriends() {
         friendEl.addEventListener('click', () => {
             const friendInState = findFriendByName(friend.name, friendData);
             if (mushroomCount === 0) {
-                alert ('No more mushies to give! Time to go forage for more, friend!')
+                alert ('No more mushies to give! Time to go forage for more, friend!');
             }
             if (mushroomCount > 0 && friend.satisfaction < 3) {
                 friendInState.satisfaction++;
