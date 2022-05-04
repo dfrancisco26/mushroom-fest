@@ -56,7 +56,8 @@ addMushroomButton.addEventListener('click', () => {
 
 addFriendButton.addEventListener('click', () => {
     let name = friendInputEl.value;
-    let newFriend = { name: name.value || `${nameArray[Math.floor(Math.random() * 6)]}`, satisfaction: 1 };
+    let randomName = `${nameArray[Math.floor(Math.random() * 6)]}`;
+    let newFriend = { name: name.value || randomName, satisfaction: 1 };
     if (friendData.length >= 6) {
         alert('You already have enough friends!');
         return;
