@@ -56,7 +56,15 @@ addMushroomButton.addEventListener('click', () => {
 
 addFriendButton.addEventListener('click', () => {
     let name = friendInputEl.value;
-    let newFriend = { name: name.value || `${nameArray[Math.floor(Math.random() * 6)]}`, satisfaction: 1 };
+    let newFriend = { name, satisfaction: 1 };
+    if (friendInputEl === '') {
+        friendInputEl.value = generateName();
+    }
+
+    if (friendData.length >= 6) {
+        alert('You\'ve already got plenty of friends!');
+        return;
+    }
     friendData.push(newFriend);
     friendInputEl.value = '';
     displayFriends();
@@ -98,6 +106,11 @@ function findFriendByName(name, friends) {
             return friend;
         }
     }
+}
+
+function generateName() {
+    let ranName = `${nameArray[Math.floor(Math.random() * 6)]}`;
+    friendInputEl.value = ranName;
 }
 
 displayMushrooms();
