@@ -10,6 +10,14 @@ const addFriendButton = document.getElementById('add-friend-button');
 let mushroomCount = 3;
 //let truffleCount = 0;
 
+const nameArray = [
+    'David',
+    'Kat',
+    'Brien',
+    'Mariah',
+    'Indio',
+    'Kashi'
+];
 const friendData = [
     {
         name: 'Erich',
@@ -48,7 +56,7 @@ addMushroomButton.addEventListener('click', () => {
 
 addFriendButton.addEventListener('click', () => {
     let name = friendInputEl.value;
-    let newFriend = { name: name, satisfaction: 1 };
+    let newFriend = { name: name.value || `${nameArray[Math.floor(Math.random() * 6)]}`, satisfaction: 1 };
     friendData.push(newFriend);
     friendInputEl.value = '';
     displayFriends();
