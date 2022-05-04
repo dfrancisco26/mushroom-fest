@@ -5,6 +5,13 @@ export function renderMushroom() {
     return div;
 }
 
+/*export function renderTruffle() {
+    const div = document.createElement('div');
+    div.classList.add('truffle');
+
+    return div;
+}*/
+
 export function renderFriend(friend) {
     const div = document.createElement('div');
     const nameEl = document.createElement('p');

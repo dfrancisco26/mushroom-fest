@@ -175,7 +175,6 @@ footer {
     transition: all .1s ease-in-out;
     cursor: pointer;
     box-shadow: var(--shadow);
-    transform: rotate(8deg);
     background-color: lightblue;
 }  
 
@@ -203,3 +202,11 @@ footer {
     background-repeat: no-repeat;
     background-image: url('../assets/porcini.png')
 }
+
+/*.truffle {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}*/
