@@ -203,3 +203,11 @@ footer {
     background-repeat: no-repeat;
     background-image: url('../assets/porcini.png')
 }
+
+/*.truffle {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}*/
